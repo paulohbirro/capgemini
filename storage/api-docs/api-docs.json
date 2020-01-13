@@ -1,17 +1,17 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "Api web crawller seminovosBH",
+        "title": "Api teste capgemini Funcion\u00e1rios",
         "version": "1.0.0"
     },
     "paths": {
-        "/buscar/{marca}/{modelo}/{ano}/{preco}": {
+        "/employes/{countrie}": {
             "get": {
                 "tags": [
-                    "veiculo"
+                    "Funcionarios"
                 ],
-                "summary": "Retorna todos veiculos",
-                "description": "Busca todos veiculos de acordo com os filtros passados",
+                "summary": "Retorna Funcionarios Brasil",
+                "description": "Busca todos funcionarios de acordo com pa\u00eds",
                 "operationId": "findPetsByTags",
                 "produces": [
                     "application/xml",
@@ -19,58 +19,9 @@
                 ],
                 "parameters": [
                     {
-                        "name": "marca",
+                        "name": "countrie",
                         "in": "path",
-                        "description": "fiat, honda, ford ..",
-                        "required": true,
-                        "type": "string"
-                    },
-                    {
-                        "name": "modelo",
-                        "in": "path",
-                        "description": "uno, palio, tempra",
-                        "required": true,
-                        "type": "string"
-                    },
-                    {
-                        "name": "ano",
-                        "in": "path",
-                        "description": "1981-2020",
-                        "required": true,
-                        "type": "string"
-                    },
-                    {
-                        "name": "preco",
-                        "in": "path",
-                        "description": "2000-40000",
-                        "required": true,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Opera\u00e7\u00e3o Realizada Com sucesso!"
-                    }
-                }
-            }
-        },
-        "/buscar/detalhes": {
-            "post": {
-                "tags": [
-                    "veiculo detalhes"
-                ],
-                "summary": "Retorna detalhes do veiculo de acordo com a url passada",
-                "description": "Retorna detalhes do veiculo",
-                "operationId": "findPetsByTags",
-                "produces": [
-                    "application/xml",
-                    "application/json"
-                ],
-                "parameters": [
-                    {
-                        "name": "url",
-                        "in": "formData",
-                        "description": "url resgatada do outro endpoint linkDetalhes",
+                        "description": "Brasil = 1 Chile = 2 Paraguai = 3",
                         "required": true,
                         "type": "string"
                     }
